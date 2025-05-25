@@ -6,12 +6,24 @@ int main() {
      cin>>t;
      while(t--)
      {
-         string s;
-         cin>>s;
-         int a,b;
-         a=s[0]-'0';
-         b=s[2]-'0';
-         cout<<a+b<<endl;
+        int n,m=0;
+        cin>>n;
+        vector<int>v(n);
+        for(int i=0;i<n;i++)
+            cin>>v[i];
+         sort(v.begin(),v.end());
+         for(int i=0;i<n-1;i++)
+            {
+                if(v[i]==v[i+1])
+                   m++;
+
+            }
+            if(m==0)
+                cout<<"YES"<<endl;
+            else
+                cout<<"NO"<<endl;
+
+
      }
     return 0;
 }
